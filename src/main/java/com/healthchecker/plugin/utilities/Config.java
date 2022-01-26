@@ -1,4 +1,4 @@
-package com.healthchecker.plugin.misc;
+package com.healthchecker.plugin.utilities;
 
 import org.bukkit.configuration.InvalidConfigurationException;
 import org.bukkit.configuration.file.YamlConfiguration;

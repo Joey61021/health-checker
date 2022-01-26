@@ -1,4 +1,4 @@
-package com.healthchecker.plugin.misc;
+package com.healthchecker.plugin.utilities;
 
 import org.bukkit.ChatColor;
 

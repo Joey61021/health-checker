@@ -1,7 +1,7 @@
 package com.healthchecker.plugin.commands;
 
 import com.healthchecker.plugin.Main;
-import com.healthchecker.plugin.misc.Utils;
+import com.healthchecker.plugin.utilities.Utils;
 import org.bukkit.Bukkit;
 import org.bukkit.Sound;
 import org.bukkit.command.Command;

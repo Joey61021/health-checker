@@ -1,7 +1,7 @@
 package com.healthchecker.plugin;
 
 import com.healthchecker.plugin.commands.GenericCmd;
-import com.healthchecker.plugin.misc.Config;
+import com.healthchecker.plugin.utilities.Config;
 import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
