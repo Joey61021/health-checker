@@ -6,7 +6,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 public class Main extends JavaPlugin {
 
-    public static Config getConfig;
+    private Config config;
 
     @Override
     public void onEnable() {
@@ -14,12 +14,12 @@ public class Main extends JavaPlugin {
 	    registerCommands();
     }
 
-    private void loadConfig() {
-        getConfig = new Config(this, getDataFolder(), "config", "config.yml");
+    void loadConfig() {
+        config = new Config(this, getDataFolder(), "config", "config.yml");
   }
 
-    private void registerCommands() {
-	    getCommand("health").setExecutor(new GenericCmd());
-	    getCommand("hunger").setExecutor(new GenericCmd());
+    void registerCommands() {
+	    getCommand("health").setExecutor(new GenericCmd(config));
+	    getCommand("hunger").setExecutor(new GenericCmd(config));
     }
 }
