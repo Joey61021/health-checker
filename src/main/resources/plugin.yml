@@ -1,0 +1,9 @@
+author: Texxyy
+name: HealthChecker
+main: com.healthchecker.plugin.Main
+api-version: 1.13
+version: 0.4
+
+commands:
+  health:
+  hunger:

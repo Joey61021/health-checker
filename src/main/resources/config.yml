@@ -1,0 +1,15 @@
+Messages:
+  No-Permission: '&cSorry, but you do not have permission to perform this command!'
+  Enter-Player: '&cPlease enter a player username!'
+  No-Player: '&cSorry, but we cannot find this player in your current server!'
+Commands:
+  Health:
+    Message: '&f%target% is currently at &c%health% &fHealth!'
+    Sound:
+      Enabled: true
+      Type: ORB_PICKUP
+  Hunger:
+    Message: '&f%target% is currently at &e%hunger% &fHunger!'
+    Sound:
+      Enabled: true
+      Type: ORB_PICKUP
