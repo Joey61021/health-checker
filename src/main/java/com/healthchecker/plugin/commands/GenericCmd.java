@@ -2,11 +2,10 @@ package com.healthchecker.plugin.commands;
 
 import com.healthchecker.plugin.services.Message.Message;
 import com.healthchecker.plugin.services.Message.MessageService;
-import com.healthchecker.plugin.utilities.Config;
+import com.healthchecker.plugin.services.SoundService;
 import lombok.NonNull;
 import lombok.RequiredArgsConstructor;
 import org.bukkit.Bukkit;
-import org.bukkit.Sound;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -18,7 +17,7 @@ public class GenericCmd implements CommandExecutor {
 	@NonNull
 	private final MessageService messageService;
 	@NonNull
-	private final Config         config;
+	private final SoundService   soundService;
 
 	@Override
 	public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
@@ -41,8 +40,7 @@ public class GenericCmd implements CommandExecutor {
 									health ? Message.CMD_HEALTH : Message.CMD_HUNGER,
 									(s) -> s.replace("%target%", target.getName())
 											.replace("%" + cmd.getName() + "%", String.valueOf(Math.round(health ? target.getHealth() : target.getFoodLevel()))));
-		if (sender instanceof Player && config.getBoolean("Commands." + generic + ".Sound.Enabled"))
-			((Player) sender).playSound(((Player) sender).getLocation(), Sound.valueOf(config.getString("Commands." + generic + ".Sound.Type").toUpperCase()), 1, 1);
+		if (sender instanceof Player) soundService.playSound(sender, "Commands." + generic + ".Sound");
 		return false;
 	}
 }
