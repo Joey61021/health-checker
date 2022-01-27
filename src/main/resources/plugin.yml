@@ -1,7 +1,7 @@
 author: Texxyy
 name: HealthChecker
 main: com.healthchecker.plugin.Main
-api-version: 1.13
+api-version: 1.8.8
 version: ${project.version}
 
 commands:
